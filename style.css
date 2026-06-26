@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+  overflow: hidden;
+}
+
+#gameCanvas {
+  display: block;
+  cursor: crosshair;
+}
+
+#hud {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  pointer-events: none;
+  user-select: none;
+  font-family: monospace;
+}
+
+.hud-block-preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.65);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.block-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+
+.block-label {
+  font-size: 13px;
+  color: #eee;
+  letter-spacing: 0.03em;
+}
+
+.hud-mode-badge {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+}
+
+.mode-erase {
+  background: rgba(220, 50, 50, 0.85);
+  color: #fff;
+  border: 1.5px solid rgba(255, 100, 100, 0.5);
+}
+
+.mode-place {
+  background: rgba(30, 30, 30, 0.8);
+  color: #aaa;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+}
+
+.hud-keys {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.35);
+  text-align: right;
+  line-height: 1.7;
+}
+
+.key {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  padding: 0 4px;
+}
